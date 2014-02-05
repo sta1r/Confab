@@ -1,0 +1,205 @@
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+//@import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+@import "foundation/components/global"; // *always required
+@import "foundation/components/grid";
+@import "foundation/components/visibility";
+// @import "foundation/components/block-grid";
+@import "foundation/components/type";
+// @import "foundation/components/button-groups"; // *requires components/buttons
+// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/components/split-buttons"; // *requires components/buttons
+// @import "foundation/components/flex-video";
+// @import "foundation/components/section";
+@import "foundation/components/top-bar";  // *requires components/grid
+// @import "foundation/components/orbit";
+// @import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+@import "foundation/components/clearing";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+@import "foundation/components/labels";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+// @import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/dropdown";
+
+// if time
+//@import "compass/typography/vertical_rhythm";
+//@import "compass/layout/grid-background";
+@import "wufoo";
+@import "utilities";
+
+
+/* Additional breakpoints */
+$mobile-screen: emCalc(320px);
+$mobile: "only screen and (max-width:"#{$mobile-screen}")";
+
+/* Generic classes */
+//@include establish-baseline($base-font-size);
+.show-baseline {
+	//@include baseline-grid-background( $grid-background-baseline-height, $grid-background-baseline-color);
+}
+
+.full-width { float: left; width: 100%; }
+
+ul {
+	
+}
+.inline li { display: inline;}
+
+.green-bg {
+	background-color: $primary-color;
+}
+
+.green-bg-60 {
+	background: rgb(77, 169, 154); // $green2 as RGB values
+	background: rgba(77, 169, 154, 0.6);
+	/* For IE 5.5 - 7*/
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#992e655c, endColorstr=#992e655c);
+	/* For IE 8*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#992e655c, endColorstr=#992e655c)";
+}
+
+.green-bg-60, .site-footer, #register h2 {
+	color: #fff;
+}
+
+.arrow {
+	display: block;
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+	background: url('../img/arrows.png') 0 0 no-repeat;
+	&.up {
+		background-position: 0 -30px;
+	}
+}
+
+
+/* Type */
+p {
+	//@include adjust-font-size-to(16px);
+}
+
+.bold {
+	font-family: $header-font-family;
+	font-weight: $header-font-weight;
+}
+
+.plus-size {
+	@extend %lead;
+}
+
+.body-text {
+	h1,h2,h3,h4,h5,h6 {
+		@extend %subheader;
+	}
+}
+
+hr.faded {
+  height: 1px;
+  border: none; 
+  margin: 0;
+  background: $primary-color;
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      right bottom,
+      color-stop(0, rgb(255,255,255)),
+      color-stop(0.2, rgb(77,169,154)),
+      color-stop(0.8, rgb(77,169,154)),
+      color-stop(1, rgb(255,255,255))
+  );
+  background-image: -moz-linear-gradient(
+      left center,
+      rgb(255,255,255) 0%,
+      rgb(77,169,154) 20%,
+      rgb(77,169,154) 80%,
+      rgb(255,255,255) 100%
+  );
+}
+
+
+/* Blocks */
+.section {
+	width: 100%;
+	height: 100%;
+	height: auto;
+	overflow-x: hidden;
+	min-height: 100%;
+	z-index: 1;
+	.row {
+		padding: emCalc(40px) 0 emCalc(40px);
+	}
+	.divider {
+		padding: 0;
+	}
+}
+
+.contains-nav {
+	height: $topbar-height;
+	margin-bottom: 0;
+}
+
+#people-bg {
+	background: url('../img/people.jpg') 0 emCalc(40px) no-repeat;
+}
+
+#register {
+	background: $primary-color url('../img/pixels-green.png') top center no-repeat;
+	background-attachment:		fixed;
+	background-size:			cover;
+	-moz-background-size:		cover;
+	-webkit-background-size:	cover;
+}
+
+/* Box-outs */
+.box-out {
+	padding: emCalc(20px) emCalc(20px) emCalc(2px);
+	margin-bottom: emCalc(20px);
+}
+
+
+/* Site footer */
+.site-footer {
+	padding-top: emCalc(20px);
+}
+
+
+/* Media Queries */
+// Set h1 slightly smaller, unless minimum 768px wide
+@media #{$mobile} { 
+	h1 {
+		font-size: emCalc(26px);	
+	}
+}
+
+@media #{$small} {
+	.strapline, .pull-quote, .plus-size {
+		font-size: $h4-font-size;	
+	}
+}
+
+// a breakpoint to match the break of the topbar to a pop-out
+@media #{$mobile} {
+	#people-bg {
+		padding-top: 200px;
+	}
+}

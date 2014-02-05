@@ -1,0 +1,39 @@
+<section id="about" class="section">
+	<div class="row">
+		<header class="large-12 columns centered">
+			<h2><perch:content id="heading" type="text" label="Heading" html="false" required="true" title="true" /></h2>
+		</header>
+
+		<div class="large-10 large-offset-1 columns centered">
+			<p class="lead"><perch:content id="intro" type="textarea" label="Introduction" size="m" html="false" required="true" /></p>
+		</div>
+		<div class="large-6 columns body-text">
+			<perch:content id="body-left" type="textarea" textile="true" editor="markitup" size="m" label="Body - left column" />
+		</div>
+		<div class="large-6 columns body-text">
+			<perch:content id="body-right" type="textarea" textile="true" editor="markitup" size="m" label="Body - right column" />
+		</div>
+	</div>
+</section>
+
+<section class="section green-bg-60 add-bottom">
+	<div id="people-bg" class="row clearfix">
+		<div class="large-8 columns large-offset-4 plus-size">
+			<perch:content id="box-out" type="textarea" textile="true" editor="markitup" size="m" label="Box-out section" html="true" required="true" />
+		</div>
+	</div>
+</section>	
+		
+<section class="section">
+	<div class="row">			
+		<div class="large-12 columns centered">
+			<p class="lead bold"><perch:content id="message" type="textarea" size="s" label="Short message" html="false" required="true" /></p>
+		</div>
+	</div>
+	<!--<div class="full-width"><a class="scroll-btn arrow aligncenter" href="#event"></a></div>-->
+	<div class="row divider">
+		<div class="large-10 large-offset-1 columns centered">
+			<hr class="faded">
+		</div>
+	</div>
+</section>

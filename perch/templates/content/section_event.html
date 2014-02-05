@@ -1,0 +1,21 @@
+<section id="event" class="section">
+	<div class="row">
+		<div class="large-12 columns centered">
+			<h2><perch:content id="heading" type="text" label="Heading" html="false" required="true" title="true" /></h2>
+			<p class="lead"><perch:content id="subheading" type="text" label="Sub-heading" html="false" required="true" /></p>
+		</div>
+		<div class="large-6 columns">
+			<div class="box-out green-bg-60">	
+				<ul class="no-bullet plus-size">
+					<li>Date: <perch:content id="date" type="date" label="Date" format="l j F Y" /></li>
+					<li>Location: <perch:content id="location" type="text" label="Location" html="false" required="true" /></li>
+					<li>Time: <perch:content id="time" type="text" label="Time" html="false" required="true" /></li>
+				</ul>
+			</div>
+			<img src="<perch:content type="image" id="image" label="Image" />" alt="<perch:content type="text" id="alt" label="Description" required="true" help="e.g. Photo of attendees at the Confab Salon event" title="true" />" />
+		</div>
+		<div class="large-6 columns body-text">
+			<perch:content id="body-left" type="textarea" textile="true" editor="markitup" size="m" label="Body - left column" />
+		</div>
+	</div>
+</section><!-- #event -->
