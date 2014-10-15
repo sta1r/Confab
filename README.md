@@ -8,3 +8,9 @@ For a time at www.confabsalon.org, CONFAB was a project with Northamptonshire Co
 ## Licence
 
 You are free to use the design and theme, but please don't use the name Confab, or Confab Salon, in any new projects. Please also note that Perch and Zurb Foundation have their own licences.
+
+## Screenshots
+
+![alt tag](img/confab-screenshot.jpg)
+
+![alt tag](img/confab-screenshot2.jpg)
